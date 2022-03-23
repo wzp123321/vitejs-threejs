@@ -6,23 +6,20 @@ import dayjs from "dayjs";
 import "dayjs/locale/zh-cn";
 dayjs.locale("zh-cn");
 const locale = zhCN;
-const value1 = ref();
 
 defineExpose({
   locale,
-  value1,
 });
 defineComponent({
   components: {
     DatePicker,
-    LocaleProvider
+    LocaleProvider,
   },
 });
 </script>
 
 <template>
   <LocaleProvider :locale="locale">
-    <DatePicker v-model:value="value1" />
     <router-view></router-view>
   </LocaleProvider>
 </template>
