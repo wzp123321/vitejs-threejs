@@ -1,6 +1,6 @@
 // 引入three
 import * as THREE from "three";
-import { RGBELoader } from "three";
+import { RGBELoader, Ax } from "three";
 // 常量
 import THREE_CONSTANT from "./constant";
 

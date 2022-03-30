@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
 const routes: RouteRecordRaw[] = [
   {
@@ -15,9 +15,16 @@ const routes: RouteRecordRaw[] = [
     },
     component: () => import("../views/three-chart/three-chart.vue"),
   },
+  {
+    path: "/demo",
+    meta: {
+      name: "Demo",
+    },
+    component: () => import("../views/demo/demo.vue"),
+  },
 ];
 
 export default createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { defineComponent, ref } from "vue";
-import { DatePicker, LocaleProvider } from "ant-design-vue";
+import { DatePicker, ConfigProvider } from "ant-design-vue";
 import zhCN from "ant-design-vue/es/locale/zh_CN";
 import dayjs from "dayjs";
 import "dayjs/locale/zh-cn";
@@ -13,13 +13,18 @@ defineExpose({
 defineComponent({
   components: {
     DatePicker,
-    LocaleProvider,
+    ConfigProvider,
   },
 });
 </script>
 
 <template>
-  <LocaleProvider :locale="locale">
+  <ConfigProvider :locale="locale">
     <router-view></router-view>
-  </LocaleProvider>
+  </ConfigProvider>
 </template>
+<style lang="less" scoped>
+#app {
+  height: 100%;
+}
+</style>
